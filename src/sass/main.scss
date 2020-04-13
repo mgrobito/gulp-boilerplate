@@ -1,0 +1,7 @@
+$bgcolor:white;
+@import "node_modules/bootstrap/scss/bootstrap";
+@import 'nav.scss';
+h1{
+	color:$bgcolor;
+	background-color: red;
+}
