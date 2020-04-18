@@ -1,29 +1,25 @@
 const gulp = require('gulp');
-const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
+const clean = require('gulp-clean');
+
+const baseDir = 'dist';
+const srcSass = 'src/sass';
+const distSass = 'dist/css';
 
 
-function style() {
-    return gulp.src('./src/sass/*.scss')
+gulp.task('clean', function(){
+    return gulp.src(baseDir, {read: false})
+        .pipe(clean({force: true}));
+});
+
+//outputStyle in gulp-sass has four options: nested, expanded, compact, compressed
+gulp.task('style', function(){
+    return gulp.src(srcSass+'/main.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css'))
-        .pipe(browserSync.stream());
-}
+        .pipe(sass({outputStyle: 'nested'}))
+        .pipe(gulp.dest(distSass))
+});
 
-function serve() {
-    browserSync.init({
-        server: {
-            baseDir: './dist',
-            index: "/index.html"
-        }
-    });
-    gulp.watch('src/sass/**/*.scss', style);
-    gulp.watch('dist/*.html').on('change', browserSync.reload);
-    gulp.watch('dist/js/**/*.js').on('change', browserSync.reload);
-}
 
-exports.style = style;
-exports.serve = serve;
 
-// for default 
-// exports.default = serve
+gulp.task('default', gulp.parallel('style'));
