@@ -9,3 +9,10 @@ Commad to compile and run realtime:
 
 $gulp serve
 
+#Clean the 'dist/' and recompile file
+
+$gulp reset
+
+#Live Reload
+
+$gulp watch

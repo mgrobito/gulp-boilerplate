@@ -1,4 +1,9 @@
 /*!
+ * Gulp-Boilerplate (https://github.com/mgrsantox/gulp-boilerplate)
+ * Copyright 2019-2020 Santosh Magar
+ * Licensed under MIT (https://github.com/mgrsantox/gulp-boilerplate/blob/master/LICENSE)
+ */
+/*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -7526,17 +7531,11 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-* {
-  margin: 0;
-  padding: 0; }
-
-.nav {
-  backgroud: white;
-  display: flex; }
-
-.nav a {
-  color: teal; }
+.san h1 {
+  display: flex;
+  flex-direction: left;
+  background: red;
+  margin: 5px 10px; }
 
 h1 {
-  color: white;
-  background-color: red; }
+  color: yellow; }
