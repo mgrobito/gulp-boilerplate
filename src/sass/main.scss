@@ -1,7 +1,12 @@
-$bgcolor:white;
-@import "node_modules/bootstrap/scss/bootstrap";
-@import 'nav.scss';
+/*!
+ * Gulp-Boilerplate (https://github.com/mgrsantox/gulp-boilerplate)
+ * Copyright 2019-2020 Santosh Magar
+ * Licensed under MIT (https://github.com/mgrsantox/gulp-boilerplate/blob/master/LICENSE)
+ */
+
+@import "bootstrap";
+@import "customs";
+
 h1{
-	color:$bgcolor;
-	background-color: red;
+	color: yellow;
 }

@@ -1,0 +1,9 @@
+@import 'variables';
+@import 'mixins';
+
+
+.san h1{
+	@include flexLeft();
+	background: $sanRed;
+	margin: 5px 10px;
+}
